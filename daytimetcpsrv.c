@@ -39,10 +39,12 @@ int main(int argc, char **argv) {
 		/* connfd = accept(listenfd, NULL, NULL); */
 		const char* caddr = inet_ntop(AF_INET,  &cliaddr.sin_addr, buff, sizeof(buff));
 		int cport = ntohs(cliaddr.sin_port);
-		printf("conn from %s, port: %d, connfd: %d", caddr, cport, connfd);
+		printf("conn from %s, port: %d, connfd: %d\n", caddr, cport, connfd);
 		ticks = time(NULL);
 		snprintf(buff, sizeof(buff), "%.24s\r\n", ctime(&ticks));
 		write(connfd, buff, strlen(buff));
 		close(connfd);
 	}
+
+	return 0;
 }

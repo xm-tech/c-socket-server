@@ -11,5 +11,5 @@ run:
 
 .PHONY : clean
 clean :
-	-rm -f simple_server tags
+	# -rm -f simple_server tags
 	-rm -f daytimetcpsrv tags
