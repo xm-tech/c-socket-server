@@ -32,8 +32,8 @@ int main(int argc, char **argv) {
 	printf("binded:%d\n", binded);
 	
 	listen(listenfd, BACKLOG);
-
-	for( ; ; ) {
+	
+	while (true) {
 		len = sizeof(cliaddr);
 		connfd = accept(listenfd, (SA *) &cliaddr, &len);
 		/* connfd = accept(listenfd, NULL, NULL); */
