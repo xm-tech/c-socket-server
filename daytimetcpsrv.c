@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
 	bzero(&serveraddr, sizeof(serveraddr));
 	serveraddr.sin_family = AF_INET;
 	serveraddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	serveraddr.sin_port = htons(13);
+	serveraddr.sin_port = htons(8888);
 
 	bool binded = bind(listenfd, (SA *)&serveraddr, sizeof(serveraddr));
 	printf("binded:%d\n", binded);
