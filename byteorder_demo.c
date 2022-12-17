@@ -6,7 +6,6 @@ union data {
 	char c[sizeof(short)];
 } un;
 
-
 // TODO make main a snippet in vim
 int main(int argc, char **argv) {
 	printf("%s\n", CPU_VENDOR_OS);
