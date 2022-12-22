@@ -62,7 +62,7 @@ int main(int argc, char **argv) {
 
 // 不断从连接上读取数据，并返回给客户端
 void handle_conn(int connfd) {
-	while (true) {
+	for (;;) {
 		char buf[1024];
 		// read system call
 		int n = read(connfd, buf, 1024);
