@@ -85,7 +85,7 @@ void handle_conn(int connfd) {
 			/* printf("handle_conn, input:%.6s\n", buf); */
 		} else {
 			if (errno == EINTR) {
-				// 若错误是因为系统终端所致，则需要继续读取数据
+				// 若错误是因为系统中断所致，则可继续读取数据
 				continue;
 			} else {
 				// 否则其他错误的话, 退出
